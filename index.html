@@ -5,160 +5,100 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LUZA Gebäudereinigung</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f7f9fa;
-      color: #003333;
-    }
-    header {
-      background-color: #008b8b;
-      color: white;
-      text-align: center;
-      padding: 2rem 1rem;
-      position: relative;
-    }
-    header img {
-      max-width: 120px;
-    }
-    .lang-switch {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-    }
-    .lang-switch button {
-      margin-left: 0.5rem;
-      background: white;
-      color: #008b8b;
-      border: none;
-      padding: 0.3rem 0.6rem;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    .section {
-      max-width: 800px;
-      margin: auto;
-      padding: 2rem 1rem;
-    }
-    h2 {
-      color: #008b8b;
-    }
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    ul li::before {
-      content: "✓";
-      margin-right: 0.5rem;
-      color: #008b8b;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    input, textarea {
-      padding: 0.8rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    button, .whatsapp-button {
-      background-color: #008b8b;
-      color: white;
-      border: none;
-      padding: 0.8rem;
-      border-radius: 5px;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-      text-align: center;
-    }
-    button:hover, .whatsapp-button:hover {
-      background-color: #006666;
-    }
-    .whatsapp-button {
-      background-color: #25D366;
-    }
-    footer {
-      background-color: #003333;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-    }
-    footer a {
-      color: #a8ffff;
-    }
-    [data-lang] {
-      display: none;
-    }
-    [data-lang="de"].active,
-    [data-lang="en"].active {
-      display: block;
-    }
+    body { margin: 0; font-family: Arial, sans-serif; color: #333; }
+    header { background: #0073b1; color: white; padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+    header img { height: 60px; }
+    nav { background: #005a8d; display: flex; justify-content: center; flex-wrap: wrap; padding: 0.5rem; }
+    nav a { color: white; margin: 0.5rem 1rem; text-decoration: none; font-weight: bold; }
+    section { padding: 2rem; max-width: 900px; margin: auto; }
+    .hero { background: url('https://images.unsplash.com/photo-1581579185169-8125aa3bde7b?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover; color: white; padding: 5rem 2rem; text-align: center; }
+    .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+    .services ul { list-style: none; padding-left: 0; }
+    .services li::before { content: "✔️ "; margin-right: 0.5rem; }
+    .gallery img { width: 100%; max-width: 280px; margin: 1rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+    .gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
+    footer { background: #f4f4f4; text-align: center; padding: 1rem; margin-top: 2rem; }
   </style>
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="LUZA Logo" />
-    <h1>LUZA Gebäudereinigung</h1>
-    <div class="lang-switch">
-      <button onclick="switchLang('de')">DE</button>
-      <button onclick="switchLang('en')">EN</button>
+    <img src="/mnt/data/07cf0f34-7f70-437c-9d7b-35055efaf626.jpg" alt="LUZA Logo">
+    <div>
+      <h1>LUZA Gebäudereinigung</h1>
+      <p>Wir machen den Unterschied – sichtbar sauber.</p>
     </div>
   </header>
-  <div class="section" data-lang="de" class="active">
+
+  <nav>
+    <a href="#start">Start</a>
+    <a href="#ueberuns">Über uns</a>
+    <a href="#leistungen">Leistungen</a>
+    <a href="#referenzen">Referenzen</a>
+    <a href="#galerie">Galerie</a>
+    <a href="#angebot">Angebot anfordern</a>
+    <a href="#kontakt">Kontakt</a>
+  </nav>
+
+  <section id="start" class="hero">
+    <h1>Willkommen bei LUZA</h1>
+    <p>Ihr zuverlässiger Partner für professionelle Gebäudereinigung in Kempten und Umgebung</p>
+  </section>
+
+  <section id="ueberuns">
+    <h2>Über uns</h2>
+    <p>Luza GmbH – Moderne Gebäudereinigung mit Anspruch</p>
+    <p>Sauberkeit ist heute mehr als nur ein Hygienefaktor – sie steht für Professionalität, Wertschätzung und eine positive Arbeitsatmosphäre. Die Luza GmbH ist Ihr kompetenter Partner, wenn es um maßgeschneiderte Gebäudereinigung geht. Wir verstehen, dass jedes Unternehmen individuelle Anforderungen hat – und genau darauf richten wir unsere Dienstleistungen aus.</p>
+    <p>Unser Ansatz: persönlich, flexibel und zukunftsorientiert. Gemeinsam mit Ihnen analysieren wir Ihre Bedürfnisse und entwickeln ein Reinigungskonzept, das perfekt zu Ihrem Objekt passt – ob Bürogebäude, Praxis, Kanzlei, Schule oder Industrieanlage. Wir setzen dabei auf geschultes Fachpersonal, moderne Reinigungstechnik und nachhaltige Reinigungsmittel.</p>
+    <p><strong>Warum Luza GmbH?</strong><br>
+    Weil wir mehr bieten als Standard. Unsere Teams arbeiten gründlich, effizient und mit dem Blick fürs Detail. Umweltfreundlichkeit ist für uns kein Trend, sondern Teil unserer Unternehmensphilosophie. Durch den Einsatz von ökologischen Produkten und ressourcenschonenden Methoden helfen wir Ihnen, Ihren ökologischen Fußabdruck zu reduzieren – ohne Abstriche bei der Sauberkeit.</p>
+    <p>Zudem investieren wir kontinuierlich in die Aus- und Weiterbildung unserer Mitarbeitenden. So stellen wir sicher, dass unsere Reinigungsexperten immer auf dem neuesten Stand sind – fachlich wie technisch.</p>
+    <p><strong>Unsere Mission:</strong> Räume schaffen, in denen Menschen sich wohlfühlen, gesund bleiben und produktiv arbeiten können.</p>
+    <p><strong>Luza GmbH – Sauberkeit mit Konzept.</strong> Modern. Nachhaltig. Persönlich.</p>
+    <p><em>Jetzt Kontakt aufnehmen und ein individuelles Angebot erhalten – wir freuen uns auf die Zusammenarbeit!</em></p>
+  </section>
+
+  <section id="leistungen" class="services">
     <h2>Unsere Leistungen</h2>
     <ul>
       <li>Treppenhausreinigung</li>
       <li>Fenster- & Glasflächen</li>
       <li>Büro- & Praxisreinigung</li>
+      <li>Hausflurreinigung</li>
       <li>Individuelle Reinigung nach Wunsch</li>
     </ul>
-  </div>
-  <div class="section" data-lang="de">
+  </section>
+
+  <section id="referenzen">
+    <h2>Referenzen</h2>
+    <p>Eine Auswahl zufriedener Kunden und erfolgreich durchgeführter Reinigungsprojekte. Weitere Referenzen auf Anfrage.</p>
+  </section>
+
+  <section id="galerie">
+    <h2>Galerie</h2>
+    <p>Bilder sagen mehr als Worte – hier sehen Sie unsere Arbeit in Aktion.</p>
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1581579185169-8125aa3bde7b?auto=format&fit=crop&w=800&q=80" alt="Reinigung 1">
+      <img src="https://images.unsplash.com/photo-1604667153309-76e61b9c9d0f?auto=format&fit=crop&w=800&q=80" alt="Reinigung 2">
+      <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=800&q=80" alt="Reinigung 3">
+    </div>
+  </section>
+
+  <section id="angebot">
     <h2>Angebot anfordern</h2>
-    <form action="mailto:info@luza-reinigung.de" method="post" enctype="text/plain">
-      <input type="text" name="name" placeholder="Ihr Name" required />
-      <input type="email" name="email" placeholder="Ihre E-Mail" required />
-      <textarea name="message" rows="5" placeholder="Ihre Nachricht" required></textarea>
-      <button type="submit">Absenden</button>
-    </form>
-    <a class="whatsapp-button" href="https://wa.me/4915224500697" target="_blank">💬 Nachricht per WhatsApp</a>
-  </div>
-  <div class="section" data-lang="en">
-    <h2>Our Services</h2>
-    <ul>
-      <li>Stairwell cleaning</li>
-      <li>Window & glass surface cleaning</li>
-      <li>Office & medical practice cleaning</li>
-      <li>Custom cleaning on request</li>
-    </ul>
-  </div>
-  <div class="section" data-lang="en">
-    <h2>Request a Quote</h2>
-    <form action="mailto:info@luza-reinigung.de" method="post" enctype="text/plain">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" rows="5" placeholder="Your message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-    <a class="whatsapp-button" href="https://wa.me/4915224500697" target="_blank">💬 Message via WhatsApp</a>
-  </div>
+    <p>Interesse an unseren Dienstleistungen? Kontaktieren Sie uns für ein unverbindliches Angebot.</p>
+    <p>📞 Telefon: <a href="tel:+4915224500697">+49 1522 4500697</a></p>
+    <p>✉️ E-Mail: <a href="mailto:luzareinigung@gmail.com">luzareinigung@gmail.com</a></p>
+  </section>
+
+  <section id="kontakt">
+    <h2>Kontakt</h2>
+    <p>📞 Telefon: <a href="tel:+4915224500697">+49 1522 4500697</a></p>
+    <p>✉️ E-Mail: <a href="mailto:luzareinigung@gmail.com">luzareinigung@gmail.com</a></p>
+    <p>📍 Region: Kempten und Umgebung</p>
+  </section>
+
   <footer>
-    © 2025 LUZA Gebäudereinigung – <a href="#impressum">Impressum</a> | <a href="#datenschutz">Datenschutz</a>
+    &copy; 2025 LUZA Gebäudereinigung – Alle Rechte vorbehalten
   </footer>
-  <script>
-    function switchLang(lang) {
-      document.querySelectorAll('[data-lang]').forEach(el => {
-        el.classList.remove('active');
-      });
-      document.querySelectorAll('[data-lang="' + lang + '"]').forEach(el => {
-        el.classList.add('active');
-      });
-    }
-    switchLang('de');
-  </script>
 </body>
 </html>
